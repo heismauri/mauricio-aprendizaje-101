@@ -1,1 +1,11 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+La aplicación Rails para la empresa "Aprendizaje 101" debe ser descargada, en el directorio principal deben ser ejecutados los siguientes comandos:
+
+`rails db:create db:migrate db:seed`
+
+`bundle install`
+
+Ya estaría listo para inicializar el servidor con el romando `rails s`. Todos los datos solicitados estan ahí, y los datos de acceso son los mismos que fueron proporciondos por el PDF instructivo.
+
+- Usuario: admin@gmail.com, Contraseña: 291ABASD932
+- Usuario: usuario1@gmail.com, Contraseña: 291ABASD934
+- Usuario: usuario2@gmail.com, Contraseña: 281ABASD932

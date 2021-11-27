@@ -1,0 +1,37 @@
+.prospectos-table {
+  width: 100%;
+}
+
+.stats-box {
+  border: 1px solid #e6e6e6;
+}
+
+.stats-box div {
+  text-align: center;
+  border-right: 1px solid #e6e6e6;
+}
+
+.stats-box div:last-child {
+  border-right: none;
+}
+
+.stats-box .big-stats {
+  color: $primary;
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.prospectos-table th {
+  background-color: $secondary;
+  color: $white;
+}
+
+.prospectos-table th,
+.prospectos-table td {
+  padding: 8px 16px;
+}
+
+.prospectos-table td {
+  border-bottom: 1px solid #e6e6e6;
+  word-break: break-all;
+}

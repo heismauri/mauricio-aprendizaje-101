@@ -1,0 +1,18 @@
+<div class="border rounded p-4">
+  <%= simple_form_for(@prospecto) do |f| %>
+  <%= f.input :first_name, label: 'Nombre', placeholder: 'Nombre del prospecto' %>
+  <%= f.input :last_name, label: 'Apellido', placeholder: 'Apellido del prospecto' %>
+  <%= f.input :phone, label: 'Teléfono', placeholder: 'Teléfono del prospecto' %>
+  <%= f.input :email, label: 'Email', placeholder: 'Email del prospecto' %>
+  <%= f.input :status, as: :radio_buttons, label: 'Seleccione status:', collection: [
+        ['Prospecto', 'prospecto'],
+        ['Interesado', 'interesado'],
+        ['Cliente', 'cliente']
+        ] %>
+  <% if @prospecto.id.nil?  %>
+  <%= f.submit 'Crear Prospecto', class: 'btn btn-outline-primary btn-block' %>
+  <% else %>
+  <%= f.submit 'Actualizar Prospecto', class: 'btn btn-outline-primary btn-block' %>
+  <% end %>
+  <% end %>
+</div>

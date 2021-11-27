@@ -1,12 +1,14 @@
-.navbar-lewagon {
+.navbar-aprendizaje101 {
   justify-content: space-between;
-  background: white;
+  background: $primary;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-aprendizaje101 .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-brand {
+  font-family: $headers-font;
+  font-weight: bold;
+  color: $white;
 }

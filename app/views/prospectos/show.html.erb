@@ -1,0 +1,44 @@
+<div class="row mx-0 justify-content-between">
+  <div class="row mx-0">
+    <h1><%= @prospecto.full_name %></h1>
+    <h5 class="prospecto-status text-right ml-2"><%= @prospecto.status.capitalize %></h5>
+  </div>
+  <div class="action-btns">
+    <%= link_to edit_prospecto_path(@prospecto) do %>
+    <i class="fas fa-pen ml-1"></i>
+    <% end %>
+    <%= link_to prospecto_path(@prospecto), method: :delete, data: { confirm: "¿Estas seguro de borrar a '#{@prospecto.full_name}'?" } do %>
+    <i class="fas fa-trash ml-1"></i>
+    <% end %>
+  </div>
+</div>
+<div class="border rounded p-4 mb-3">
+
+  <strong>Teléfono:</strong> +<%= @prospecto.phone %><br>
+  <strong>Email:</strong> <%= link_to @prospecto.email, "mailto:#{@prospecto.email}" %><br>
+  <strong>Ingresado por:</strong> <%= link_to @prospecto.user.email, "mailto:#{@prospecto.user.email}" %><br>
+  <strong>Fecha de ingreso:</strong> <%= @prospecto.created_at.strftime('%F') %>
+</div>
+<h3>Conversaciones</h3>
+<div class="border rounded p-4">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <% if @prospecto.conversations.empty? %>
+      <small><em class="text-muted">Escribe el primer mensaje</em></small>
+      <% end %>
+      <% @prospecto.conversations.each do |conversation| %>
+      <div>
+        <small><em class="text-muted"><%= conversation.created_at.strftime('%F') %></em></small>
+        <p class="mb-0"><%= conversation.message %></p>
+      </div>
+      <hr>
+      <% end %>
+    </div>
+    <div class="col-12 col-sm-6">
+      <%= simple_form_for [@prospecto, Conversation.new] do |f| %>
+      <%= f.input :message, label: 'Mensaje:', placeholder: 'Escribe el mensaje aquí...' %>
+      <%= f.submit 'Guardar mensaje', class: 'btn btn-outline-primary btn-block' %>
+      <% end %>
+    </div>
+  </div>
+</div>
