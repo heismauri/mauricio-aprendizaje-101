@@ -22,16 +22,16 @@
     <td><%= prospecto.status.capitalize %></td>
     <td><%= prospecto.user.email %></td>
     <td class="text-center"><%= prospecto.created_at.strftime('%F') %></td>
-    <td class="text-center"><%= prospecto.conversations.count %><i class="fas fa-comment-dots text-muted ml-1"></i></td>
+    <td class="text-center"><%= prospecto.conversations.count %><i class="fas fa-comment-dots text-muted ms-1"></i></td>
     <td class="text-center">
       <%= link_to prospecto_path(prospecto) do %>
       <i class="fas fa-eye"></i>
       <% end %>
       <%= link_to edit_prospecto_path(prospecto) do %>
-      <i class="fas fa-pen ml-1"></i>
+      <i class="fas fa-pen ms-1"></i>
       <% end %>
       <%= link_to prospecto_path(prospecto), method: :delete, data: { confirm: "¿Estas seguro de borrar a '#{prospecto.full_name}'?" } do %>
-      <i class="fas fa-trash ml-1"></i>
+      <i class="fas fa-trash ms-1"></i>
       <% end %>
     </td>
   </tr>

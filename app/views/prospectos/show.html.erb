@@ -1,14 +1,14 @@
 <div class="row mx-0 justify-content-between">
   <div class="row mx-0">
     <h1><%= @prospecto.full_name %></h1>
-    <h5 class="prospecto-status text-right ml-2"><%= @prospecto.status.capitalize %></h5>
+    <h5 class="prospecto-status text-right ms-2"><%= @prospecto.status.capitalize %></h5>
   </div>
   <div class="action-btns">
     <%= link_to edit_prospecto_path(@prospecto) do %>
-    <i class="fas fa-pen ml-1"></i>
+    <i class="fas fa-pen ms-1"></i>
     <% end %>
     <%= link_to prospecto_path(@prospecto), method: :delete, data: { confirm: "¿Estas seguro de borrar a '#{@prospecto.full_name}'?" } do %>
-    <i class="fas fa-trash ml-1"></i>
+    <i class="fas fa-trash ms-1"></i>
     <% end %>
   </div>
 </div>
